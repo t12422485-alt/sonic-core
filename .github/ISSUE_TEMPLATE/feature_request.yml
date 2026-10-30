@@ -1,0 +1,21 @@
+name: 功能建議
+description: 提出新功能或改進想法
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解決什麼問題？
+      description: 例如「希望在手機上也能拖曳模組」。
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 希望的做法
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他想過的方式或參考

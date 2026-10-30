@@ -1,0 +1,62 @@
+name: 錯誤回報
+description: 回報功能異常、畫面錯誤或無法播放的問題
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 發生了什麼事？
+      description: 簡短描述問題。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟
+      placeholder: |
+        1. 開啟網站
+        2. 匯入一個 MP3
+        3. 拖曳進度條到一半
+        4. 看到……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期結果
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 使用模式
+      multiple: true
+      options:
+        - 示範模式
+        - 匯入音訊
+        - 匯入 MIDI
+        - 音訊 + MIDI
+        - 展示模式
+        - 外觀與個人化設定
+  - type: input
+    id: browser
+    attributes:
+      label: 瀏覽器與版本
+      placeholder: 例如 Chrome 141、Edge 141、Safari 18
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 作業系統與裝置
+      placeholder: 例如 Windows 11 桌機、iPhone 15（iOS 18）
+  - type: input
+    id: file
+    attributes:
+      label: 檔案格式（如與檔案有關）
+      placeholder: 例如 MP3 44.1kHz、MIDI format 1
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截圖或主控台錯誤
+      description: 可附上截圖，或按 F12 開啟主控台複製紅色錯誤訊息。請不要上傳有版權疑慮的音樂檔。
